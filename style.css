@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #0f172a, #4f46e5, #1e293b);
+  background-size: 600% 600%;
+  animation: gradientFlow 40s ease infinite;
+}
+
+.button_container {
+    display: flex;
+    gap: 20px;        
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.button_header{
+  background: none;           /* прозрачный фон */
+  border: none;               /* без рамки */
+  font-family: 'Montserrat', sans-serif; /* шрифт как у логотипа */
+  font-weight: 700;           /* жирный */
+  font-size: 1.2rem;          /* размер текста */
+  color: #ffffff;             /* цвет текста */
+  cursor: pointer;            /* курсор «рука» */
+  padding: 0;                 /* без отступов */
+  transition: color 0.3s ease, transform 0.2s ease; /* плавность анимации */
+}
+.button_header:hover{
+  color: #acacac;
+}
+
+.text_style_position_make_sure{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; /* очень жирный */
+  font-size: 2rem;  /* размер шрифта, можно менять */
+  color: #ffffff;   /* цвет текста, например белый */
+  position: absolute;
+  top: 1px;        /* отступ сверху */
+  left: 20px;       /* отступ слева */
+  text-transform: uppercase; /* все буквы заглавные */
+  letter-spacing: 1px; /* немного разряженные буквы для стиля */
+}
+
+.section1{
+  position: relative;
+  top: 150px;
+  left: 200px;
+  height: 400px; 
+  color: white;
+}
+.section2{
+  margin-top: 550px;
+  padding: 500px 400px;
+  background-color: #0f172a;
+
+}
+
+.section2 h1{
+  position: relative;
+  top: -500px;
+  font-family: 'Montserrat', sans-serif;
+  left: 450px;
+  font-size: 60px;
+  color: white;
+}
+
+.typewriter {
+  font-family: monospace; /* Чтобы печаталось по символам ровно */
+  color: white;
+  font-size: 30px;
+}
+
+@keyframes gradientFlow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
