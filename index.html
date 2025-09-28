@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Petrov</title>
 </head>
 <body>
     <header>
         <p class="text_style_position_make_sure">PETROV</p>
         <div class="button_container">
-         <button class="button_header">Home</button>
-         <button class="button_header">About</button>
-         <button class="button_header">Services</button>
-         <button class="button_header">Contact</button>
+         <a href="" class="button_header">Home</a>
+         <a href="#aboutme" class="button_header">About</a>
+         <a href="#services" class="button_header">Services</a>
+         <a href="#Contact" class="button_header">Contact</a>
         </div>
 
     </header>
@@ -28,34 +29,40 @@
                  Every project is an opportunity to grow and deliver high <br> 
                 -quality results.
            </p>
-            <a href="#aboutme" class="button-about">About</a>
+           
+            <a href="#Contact" class="button-about">Contact Me</a>
         </section>
-        <section class="section2">
-            <h1 id="aboutme">About Me</h1>
-
-            <div class="card_container">
-                <div class="card_section2">
-                    <h2 class="text_style2">Design</h2>
-                    <p class ="text_style">
-                        I enjoy creating websites with minimalist and modern designs. <br>
-                         I pay attention to colors, typography, and visual hierarchy <br>
-                          to ensure the interface is user-friendly and pleasing to <br>
-                           the eye. Even small details make a project look neat <br>
-                            and professional.
-                    </p>
-                </div>
-
-                <div class="card_section2">
-                    <h2 class="text_style2">Who i am</h2>
-                    <p class ="text_style">
-                        I'm Petrov, a web developer. I love creating neat, modern, <br>
-                         and user-friendly websites. Every project offers opportunities <br>
-                          to hone my skills and deliver high-quality results.
-                    </p>
-                </div>
+        <section id="aboutme" class="section2">
+          <h1>About Me</h1>
+        
+          <div class="card_container">
+            <div class="card_section2">
+              <h2 class="text_style2">HTML</h2>
+              <p class="text_style">
+                I can build clean and well-structured pages with semantic HTML. 
+                I create accessible layouts that search engines and screen readers can easily understand.
+              </p>
             </div>
+        
+            <div class="card_section2">
+              <h2 class="text_style2">CSS</h2>
+              <p class="text_style">
+                I style websites with modern CSS, making them responsive and visually appealing. 
+                I use flexbox, grid, animations, and media queries to ensure the site looks great on any device.
+              </p>
+            </div>
+        
+            <div class="card_section2">
+              <h2 class="text_style2">JavaScript</h2>
+              <p class="text_style">
+                I add interactivity and dynamics to websites with JavaScript. 
+                From simple effects (sliders, menus, forms) to logic for interactive elements, I make pages come alive.
+              </p>
+            </div>
+          </div>
         </section>
-        <section class = "services">
+
+        <section id="services" class = "services">
             <h1>services</h1>
             <div class="card_container3">
                 <div class="card_price">
@@ -66,7 +73,7 @@
                         <li>Responsive design for all devices</li>
                         <li>Minimalistic and clean interface</li>
                     </ul>
-                    <p>Price: 30–70 $</p>
+                    <p>Price: 10-20 $</p>
                     <a href="mailto:petrov31alexandr@gmail.com" class="button">Order Now</a>
                 </div>
                  <div class="card_price">
@@ -77,7 +84,7 @@
                         <li>Page layout design</li>
                         <li>Modern and clean style</li>
                     </ul>
-                    <p>Price: 50-90 $</p>
+                    <p>Price: 12-25 $</p>
                     <a href="mailto:petrov31alexandr@gmail.com" class="button">Order Now</a>
                 </div>
                  <div class="card_price">
@@ -88,19 +95,28 @@
                         <li>Animations and interactive elements</li>
                         <li>Speed and mobile optimization</li>
                     </ul>
-                    <p>Price: 100–180 $</p>
+                    <p>Price: 18 - 30$</p>
                      <a href="mailto:petrov31alexandr@gmail.com" class="button">Order Now</a>
 
                 </div>
             </div>
+        </section>
+        <section class="contact" id = "Contact">
+            <h1>Contact</h1>
+            <p id="mytext">Feel free to reach out for collaborations or projects:</p>
+    
+            <div class="contact-links">
+              <a href="mailto:petrov31alexandr@gmail.com" class="button">Email Me</a>
+              <a href="https://t.me/Sashik_Ua" class="button">Telegram</a>
+              <a href="https://github.com/Olexandr1776" class="button">GitHub</a>
+            </div>
+
         </section>
 
     </main>    
 
     <footer>
         <p>© 2025 Petrov. All rights reserved.</p>
-        <a href="https://www.instagram.com/">instagram</a> <br>
-        <a href="https://www.tiktok.com/de-DE/">Tik Tok</a>
         <a href="https://github.com/">Git hub</a>
     </footer>
 </body>

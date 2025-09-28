@@ -4,22 +4,28 @@ body {
   background: linear-gradient(270deg, #0f172a, #4f46e5, #1e293b);
   background-size: 600% 600%;
   animation: gradientFlow 40s ease infinite;
+  overflow-x: hidden;
+
 }
+
+
 
 .button_container {
     display: flex;
+    justify-content: flex-end;
+    margin-top: 20px; 
+    margin-right: 20px;
     gap: 20px;        
-    position: absolute;
-    top: 20px;
-    right: 30px;
 }
 .button{
+  font-family: 'Montserrat', sans-serif;
   color: white;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1); /* лёгкая прозрачность */
   backdrop-filter: blur(10px);          /* размывает фон за секцией */
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* мягкая тень */
   font-size: 22px;
+  text-decoration: none; /* убирает нижнее подчеркивание */
   border: 1px solid rgba(255, 255, 255, 0.2); /* тонкая светлая рамка */
   padding: 20px 50px;
 }
@@ -28,6 +34,8 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* мягкая тень */
 }
 .button-about{
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none; 
   color: white;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.1); /* лёгкая прозрачность */
@@ -44,6 +52,7 @@ body {
 }
 
 .button_header{
+  text-decoration: none;
   background: none;           /* прозрачный фон */
   border: none;               /* без рамки */
   font-family: 'Montserrat', sans-serif; /* шрифт как у логотипа */
@@ -98,10 +107,11 @@ body {
 }
 .section2{
   margin-top: 550px;
-  padding: 100px 400px;
+  padding: 100px 20px;
   background-color: #0f172a;
-
 }
+
+
 .card_container{
   display: flex;       /* разрешаем перенос на новую строку */
   gap: 50px;              /* расстояние между контейнерами */
@@ -123,7 +133,10 @@ body {
   position: relative;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  left: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-size: 60px;
   color: white;
 }
@@ -143,7 +156,7 @@ body {
 }
 
 .services{
-  padding: 100px;
+  padding: 90px;
 }
 .services h1{
   color: white;
@@ -159,23 +172,30 @@ body {
   color: white;
   font-size: 30px;
 }
+
 .card_container3{
   display: flex;
   justify-content: center;
   gap: 30px;
-
 }
-footer{
-    background-color: #0f172a;  /* тёмный фон */
+
+footer {
+    background-color: #0f172a;
     padding: 40px 20px;
     display: flex;
-    flex-direction: column;     /* элементы сверху вниз */
-    align-items: center;        /* центрирование по горизонтали */
-    gap: 15px;                  /* расстояние между элементами */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+
+    width: 100%;       /* растянуть на всю ширину */
+    max-width: 100vw;  /* фикс против лишних скроллов */
+    box-sizing: border-box; /* учитываем padding внутри ширины */
+    overflow-x: hidden; /* убираем фантомные скроллы */
 }
+
 footer a:link,
 footer a:visited,
 footer a:hover,
@@ -190,9 +210,135 @@ footer a:hover {
     color: #acacac;             /* цвет при наведении */
     text-shadow: 0 0 8px #ffffff; /* лёгкое свечение */
 }
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.05); /* лёгкая подложка, чтобы отделить от других секций */
+  border-radius: 15px;
+  margin: 50px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.contact p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #e0e0e0; /* светло-серый текст для контраста */
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* расстояние между кнопками */
+  flex-wrap: wrap; /* чтобы на телефоне кнопки переносились */
+}
+
+.contact-links .button {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  font-size: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 40px;
+  text-decoration: none; /* убираем подчеркивание */
+  transition: all 0.3s ease;
+}
+.card_container{
+  display: flex;     
+  gap: 50px;            
+  justify-content: center; 
+  padding: 20px;
+}
+
+.contact-links .button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px); /* лёгкий "подъём" при наведении */
+}
+
+@media (max-width: 480px) {
+  .button_container{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 25px;
+    margin-top: 90px;
+    flex-direction: column; 
+  }
+
+  .typewriter {
+  font-family: monospace; /* Чтобы печаталось по символам ровно */
+  color: white;
+  font-size: 25px;
+}
+.section1{
+  position: relative;
+  top: 150px;
+  left: 10px;
+  padding: 0px 10px;
+  height: 400px; 
+  color: white;
+}
+.card_container{  
+  flex-direction: column; 
+  justify-content: flex-start;
+}
+.section2 {
+  margin-top: 300px;  
+  padding: 20px;       
+}
+.card_section2 {
+  width: 100%;      
+  max-width: 350px; 
+  width: 100%;
+}
+.card_container3{
+  display: flex;
+  flex-direction: column; 
+  
+}
+.services{
+  max-width: 100%;
+}
+.card_price{
+  color: white;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  width: 250px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.button{
+    padding: 10px 25px;
+}
+}
 
 @keyframes gradientFlow {
   0%   { background-position: 0% 50%; }
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  overflow-x: hidden; 
+}
+
+
+section, div, footer, header {
+  max-width: 100vw;  
+  box-sizing: border-box;
 }
